@@ -1,0 +1,18 @@
+{
+  "name": "eletek-gestion",
+  "version": "0.1.0",
+  "description": "ELETEK — Sistema de gestión de flota por módulos (stock, mantenimiento, trabajos, compras, pesca, víveres)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "semilla": "node src/db/semilla.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

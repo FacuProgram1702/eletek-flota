@@ -1,0 +1,22 @@
+{
+  "name": "eletek-mikrotik-admin",
+  "version": "1.0.0",
+  "description": "Panel de administración remota de routers MikroTik para una flota pesquera (ELETEK)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "demo": "node scripts/demo.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "morgan": "^1.10.0",
+    "uuid": "^11.0.3"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}

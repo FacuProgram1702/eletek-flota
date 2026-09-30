@@ -1,0 +1,34 @@
+# ============================================
+# Caddyfile para producción con HTTPS automático
+# ============================================
+# Reemplazar "tu-dominio.duckdns.org" con tu dominio DDNS real.
+# Caddy obtiene certificados de Let's Encrypt automáticamente.
+#
+# Instalación de Caddy:
+#   https://caddyserver.com/docs/install
+#
+# Uso:
+#   1. Copiar este archivo como "Caddyfile" en el directorio de Caddy
+#   2. Ajustar el dominio
+#   3. Ejecutar: caddy run
+#
+# Requisitos:
+#   - Port forwarding en el router: 80 y 443 → IP de esta máquina
+#   - El dominio DDNS apuntando a tu IP pública
+
+tu-dominio.duckdns.org {
+    reverse_proxy localhost:3000
+    
+    # Headers de seguridad
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+    
+    # Logs de acceso
+    log {
+        output file /var/log/caddy/eletek-access.log
+        format json
+    }
+}

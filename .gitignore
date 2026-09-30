@@ -1,0 +1,20 @@
+# Dependencias: se instalan con "npm install"
+node_modules/
+
+# Credenciales y configuración real: solo se versionan los .example
+.env
+Caddyfile
+!Caddyfile.example
+
+# Bases de datos (la demo se genera con "npm run demo" / "npm run semilla")
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# Binarios, certificados y registros
+*.exe
+*.key
+*.pem
+*.log
+*.log.gz
